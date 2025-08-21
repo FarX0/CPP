@@ -1,6 +1,6 @@
-SRC = megaphone.cpp
-NAME = megaphone
-CC = clang++ -Wall -Wextra -Werror -std=c++98
+SRC = *.cpp 
+NAME = zombie
+CC = c++ -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
