@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 12:02:52 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/09 16:00:11 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/08/22 14:59:55 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/05 11:31:48 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-#define PHONEBOOK_H
+#include "HumanB.hpp"
 
-#include "repertory.hpp"
-
-class PhoneBook
+HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
-public:
-	PhoneBook();
-	~PhoneBook();
+}
+HumanB::~HumanB()
+{
+}
 
-	void add_contact();
-	void search_contact();
+void HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon = &weapon;
+}
 
-private:
-	const int max_contacts;
-	int current_nb;
-	Contact array[8];
-	bool full_flag;
-};
-
-#endif
+void HumanB::attack(void)
+{
+	if (weapon)
+		std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	else
+		std::cout << name << " attacks with their fists!" << std::endl;
+}

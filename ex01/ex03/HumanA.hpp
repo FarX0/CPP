@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 12:02:52 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/09 16:00:11 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/08/22 12:42:37 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/08/22 14:34:41 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-#define PHONEBOOK_H
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-#include "repertory.hpp"
+#include "Weapon.hpp"
 
-class PhoneBook
+class HumanA
 {
-public:
-	PhoneBook();
-	~PhoneBook();
-
-	void add_contact();
-	void search_contact();
-
 private:
-	const int max_contacts;
-	int current_nb;
-	Contact array[8];
-	bool full_flag;
-};
+	std::string name;
+	Weapon &weapon;
 
+public:
+	HumanA(std::string name, Weapon &weapon);
+	~HumanA();
+	void attack();
+};
 #endif

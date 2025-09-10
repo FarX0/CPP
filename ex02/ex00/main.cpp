@@ -5,35 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:59:25 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/01 12:34:51 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/09 11:46:41 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/09 11:58:34 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+#include <iostream>
 
-#include "repertory.hpp"
-
-int	main() {
-	PhoneBook	phoneBook;
-	std::string	line;
-	system("clear");
-	std::cout << "contact manager" << std::endl;
-	while (1)
-	{
-		std::cout << "Type ADD, SEARCH or EXIT : ";
-		if(std::getline(std::cin, line).eof())
-			break;
-		if (line == "ADD")
-			phoneBook.add_contact();
-		else if (line == "SEARCH")
-			phoneBook.search_contact();
-		else if (line == "EXIT")
-		{
-			std::cout << "Goodbye !" << std::endl;
-			break;
-		}
-		line = "";
-		system("clear");
-	}
+int main(void)
+{
+	Fixed a;
+	Fixed b(a);
+	Fixed c;
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 	return 0;
 }

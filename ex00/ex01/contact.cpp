@@ -6,46 +6,76 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 14:53:58 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/07/17 18:36:36 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/09/04 18:30:11 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "repertory.hpp"
 
-Contact::Contact() {
+Contact::Contact()
+{
 }
 
-Contact::~Contact() {
+Contact::~Contact()
+{
 }
 
-void	Contact::setName(str name) {
+void Contact::setName(str name)
+{
 	this->name = name;
 }
 
-void	Contact::setLast(str last) {
+void Contact::setLast(str last)
+{
 	this->last = last;
 }
 
-void	Contact::setNick(str nick) {
+void Contact::setNick(str nick)
+{
 	this->nick = nick;
 }
 
-void	Contact::setPhone(str phone) {
+void Contact::setPhone(str phone)
+{
 	this->phone = phone;
 }
 
-str	Contact::getName() const {
+void Contact::setSecret(str secret)
+{
+	this->darkest_secret = secret;
+}
+
+void Contact::setId(int id)
+{
+	this->id = id;
+}
+
+str Contact::getName() const
+{
 	return this->name;
 }
 
-str Contact::getLast() const {
+str Contact::getLast() const
+{
 	return this->last;
 }
 
-str Contact::getNick() const {
+str Contact::getNick() const
+{
 	return this->nick;
 }
 
-str Contact::getPhone() const {
+str Contact::getPhone() const
+{
 	return this->phone;
+}
+
+str Contact::getSecret() const
+{
+	return this->darkest_secret;
+}
+
+int Contact::getId() const
+{
+	return this->id;
 }

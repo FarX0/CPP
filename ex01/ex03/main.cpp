@@ -6,34 +6,46 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:59:25 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/01 12:34:51 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/08/22 15:34:44 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-#include "repertory.hpp"
-
-int	main() {
-	PhoneBook	phoneBook;
-	std::string	line;
-	system("clear");
-	std::cout << "contact manager" << std::endl;
-	while (1)
+int main()
+{
 	{
-		std::cout << "Type ADD, SEARCH or EXIT : ";
-		if(std::getline(std::cin, line).eof())
-			break;
-		if (line == "ADD")
-			phoneBook.add_contact();
-		else if (line == "SEARCH")
-			phoneBook.search_contact();
-		else if (line == "EXIT")
-		{
-			std::cout << "Goodbye !" << std::endl;
-			break;
-		}
-		line = "";
-		system("clear");
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
 	}
 	return 0;
 }
+/* int main()
+{
+	Weapon weapon;
+	std::string weaponType = "sword";
+	weapon.setType(weaponType);
+
+	HumanA humanA("Alice", weapon);
+	HumanB humanB("Bob");
+
+	humanA.attack();
+	humanB.attack();
+
+	humanB.setWeapon(weapon);
+	humanB.attack();
+
+	return 0;
+} */

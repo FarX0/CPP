@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/tfalchi/esercizi/git/CPP/ex01/ex03",
-      "program": "/home/tfalchi/esercizi/git/CPP/ex01/ex03/build/Debug/outDebug",
+      "cwd": "/home/tfalchi/esercizi/git/CPP/ex00/ex00",
+      "program": "/home/tfalchi/esercizi/git/CPP/ex00/ex00/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

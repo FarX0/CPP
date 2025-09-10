@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:59:25 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/05 11:27:18 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/09 11:46:41 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/09 17:13:46 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
 #include <iostream>
-#include <string>
-
-int main()
+int main(void)
 {
-	std::string brain = "HI THIS IS BRAIN";
-	std::string &brain2 = brain;
-	std::string *brain3 = &brain;
-	std::cout << &brain << std::endl;
-	std::cout << &brain2 << std::endl;
-	std::cout << brain3 << std::endl << '\n';
-	std::cout << brain << std::endl;
-	std::cout << brain2 << std::endl;
-	std::cout << *brain3 << std::endl;
+	Fixed a;
+	Fixed const b(10);
+	Fixed const c(42.42f);
+	Fixed const d(b);
+	a = Fixed(1234.4321f);
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return 0;
 }
