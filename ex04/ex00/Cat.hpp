@@ -6,7 +6,7 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 11:14:29 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/12 11:17:04 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/09/12 11:30:20 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat &src);
 		Cat &operator=(const Cat &src);
-		virtual ~Cat();
-		virtual void makeSound() const;
+		~Cat();
+		void makeSound() const;
 };
 
 #endif
