@@ -6,7 +6,7 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 14:53:58 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/08/20 15:32:15 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/09/12 16:10:29 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Zombie::Zombie(std::string name) : name(name)
 {
+	
 }
 
 Zombie::~Zombie()

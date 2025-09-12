@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 17:15:33 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/12 16:09:14 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/12 11:14:29 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/12 15:16:09 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include <iostream>
-#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class Zombie
+class Cat : public Animal
 {
-
-public:
-	Zombie(std::string name);
-	~Zombie();
-	void announce(void);
-
-private:
-	std::string name;
+	public:
+		Cat();
+		Cat(const Cat &src);
+		Cat &operator=(const Cat &src);
+		~Cat();
+		void makeSound() const;
+	private:
+		Brain *brain;
 };
-
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
 
 #endif
