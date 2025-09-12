@@ -6,7 +6,7 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 15:25:19 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/08/22 15:46:23 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/09/11 16:45:19 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::~Weapon()
 {
 }
 
-std::string Weapon::getType(void)
+const std::string& Weapon::getType(void) const
 {
 	return this->type;
 }

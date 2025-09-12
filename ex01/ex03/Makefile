@@ -1,4 +1,4 @@
-SRC = *.cpp 
+SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 NAME = a.out
 CC = c++ -Wall -Wextra -Werror -std=c++98
 

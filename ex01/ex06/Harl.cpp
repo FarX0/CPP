@@ -6,7 +6,7 @@
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 18:45:28 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/10 15:35:39 by tfalchi          ###   ########.fr       */
+/*   Updated: 2025/09/10 18:35:35 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Harl::complain(std::string level)
 	harlFuncs[2] = &Harl::warning;
 	harlFuncs[3] = &Harl::error;
 	const char *levels[] = {"debug", "info", "warning", "error"};
-	int n = 0;
+	int n = -1;
 	for (int i = 0; i < 4; ++i)
 	{
 		if (level == levels[i])
@@ -63,7 +63,7 @@ void Harl::complain(std::string level)
 			break;
 		}
 	}
-	if (n == 0)
+	if (n == -1)
 	{
 		std::cout << "Invalid argument" << std::endl;
 		return;

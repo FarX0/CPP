@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/22 11:49:27 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/11 16:45:17 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/11 12:04:56 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/11 17:31:35 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-#include <iostream>
-#include <string>
-
-class Weapon
+int main()
 {
-private:
-	std::string type;
-
-public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string& getType(void) const;
-	void setType(std::string type);
-};
-#endif
+	ClapTrap claptrap("CLTP");
+	claptrap.attack("target");
+	claptrap.takeDamage(5);
+	claptrap.beRepaired(3);
+	ScavTrap scavtrap("SCVT");
+	scavtrap.attack("target");
+	scavtrap.takeDamage(5);
+	scavtrap.beRepaired(3);
+	scavtrap.guardGate();
+	return 0;
+}

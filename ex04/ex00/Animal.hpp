@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/22 11:49:27 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/11 16:45:17 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/12 10:54:16 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/12 11:15:05 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
+#include "Cat.hpp"
+#include "Dog.hpp"
 #include <iostream>
 #include <string>
 
-class Weapon
+class Animal
 {
-private:
-	std::string type;
-
-public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string& getType(void) const;
-	void setType(std::string type);
+	public:
+		Animal();
+		Animal(const Animal &src);
+		Animal &operator=(const Animal &src);
+		virtual ~Animal();
+		virtual void makeSound() const;
+	protected:
+		std::string type;
 };
+
 #endif

@@ -1,4 +1,4 @@
-SRC = main.cpp Fixed.cpp 
+SRC = main.cpp ClapTrap.cpp
 NAME = a.out
 CC = c++ -Wall -Wextra -Werror -std=c++98
 

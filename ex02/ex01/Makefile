@@ -1,4 +1,4 @@
-SRC = *.cpp 
+SRC = main.cpp Fixed.cpp
 NAME = a.out
 CC = c++ -Wall -Wextra -Werror -std=c++98
 

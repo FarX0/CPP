@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfalchi <tfalchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/22 11:49:27 by tfalchi           #+#    #+#             */
-/*   Updated: 2025/09/11 16:45:17 by tfalchi          ###   ########.fr       */
+/*   Created: 2025/09/12 11:12:22 by tfalchi           #+#    #+#             */
+/*   Updated: 2025/09/12 11:15:26 by tfalchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#include "Animal.hpp"
 
-#include <iostream>
-#include <string>
-
-class Weapon
+int main()
 {
-private:
-	std::string type;
-
-public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string& getType(void) const;
-	void setType(std::string type);
-};
-#endif
+	const Animal *meta = new Animal();
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); // will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+	return 0;
+}
